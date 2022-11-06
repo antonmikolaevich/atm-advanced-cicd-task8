@@ -34,7 +34,7 @@ pipeline {//for jenkins -docker integration build image for the beginning
     }
     post {
         always {
-            junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
+            bat 'docker network rm grid'
         }
     }
 }
