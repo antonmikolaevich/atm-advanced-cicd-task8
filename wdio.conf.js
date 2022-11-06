@@ -179,9 +179,6 @@ exports.config = {
             return `test-results.xml`
         }
     }]],
-
-
-    
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
