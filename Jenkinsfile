@@ -1,31 +1,33 @@
 pipeline {//for jenkins -docker integration build image for the beginning
     agent any
     stages {
-    stage("Start docker-compose"){
+    stage("Create network grid"){
         steps {
             script {
-                bat 'docker-compose up'
+                bat 'docker network create grid'
             }
         }
     }    
-    stage ("Build Docker Image"){
+    stage ("Run Selenium Grid"){
         steps {
             script {
-            bat "docker build --tag jenkinsdocker01 ."
+            bat "docker run -d -p 4444:4444 --net grid --name selenium-hub selenium/hub:3.141.59-20210929"
         }
         }
     }
-    stage ("Run Docker Image"){
+    stage ("Run tests in Chrome"){
         steps {
             script {
-            bat "docker run -v %cd%\\reporterDocker:/api-project/reporterDocker jenkinsdocker01"
+            bat "docker run -d --net grid -e HUB_HOST=selenium-hub -v /reporterDocker:/reporterDocker selenium/node-chrome:3.141.59-20210929"
+            junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
         }
         }
     }
-    stage("Stop docker-compose"){
+    stage("Run tests in Firefox"){
         steps {
             script {
-                bat 'docker-compose down'
+                bat 'docker run -d --net grid -e HUB_HOST=selenium-hub -v /reporterDocker:/reporterDocker selenium/node-firefox:3.141.59-20210929'
+                junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
             }
         }
     } 

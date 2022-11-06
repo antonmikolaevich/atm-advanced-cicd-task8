@@ -9,7 +9,8 @@
   "author": "Anton_Rak@epam.com",
   "license": "ISC",
   "dependencies": {
-    "@wdio/cli": "^7.25.4"
+    "@wdio/cli": "^7.25.4",
+    "geckodriver": "^3.2.0"
   },
   "devDependencies": {
     "@wdio/junit-reporter": "^7.25.4",
