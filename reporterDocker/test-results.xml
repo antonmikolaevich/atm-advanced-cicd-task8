@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="My Login application" timestamp="2022-11-06T22:58:31" time="83.427" tests="3" failures="3" errors="3" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="My Login application"/>
+      <property name="capabilities" value="chrome.107_0_5304_88.windows"/>
+      <property name="file" value=".\test\specs\example.e2e.js"/>
+    </properties>
+    <testcase classname="chrome.107_0_5304_88.windows.My_Login_application" name="Page Wdio test" time="16.469">
+      <failure/>
+      <error message="element (&quot;div.logo&quot;) still not enabled after 10000ms"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/url - {"url":"https://sso.teachable.com/secure/9521/identity/login/password"}
+RESULT: {"url":"https://sso.teachable.com/secure/9521/identity/login/password"}
+COMMAND: GET /session/b4cadec1aa3e27c13167c88f13ceddca/title - {}
+RESULT: {}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/element - {"using":"css selector","value":"input[type=\"email\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"email\"]"}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/element/a2c37743-7354-4e1e-98f8-35e6e5f0eba2/click - {}
+RESULT: {}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/element - {"using":"css selector","value":"input[type=\"email\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"email\"]"}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/element/a2c37743-7354-4e1e-98f8-35e6e5f0eba2/value - {"text":"a_niko415@mail.ru"}
+RESULT: {"text":"a_niko415@mail.ru"}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/element - {"using":"css selector","value":"input[type=\"password\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"password\"]"}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/element/d8a9f5b0-c609-4e14-86f6-689bc659eb02/click - {}
+RESULT: {}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/element - {"using":"css selector","value":"input[type=\"password\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"password\"]"}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/element/d8a9f5b0-c609-4e14-86f6-689bc659eb02/value - {"text":"Pavlusha_19"}
+RESULT: {"text":"Pavlusha_19"}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/element - {"using":"css selector","value":"input[type=\"submit\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"submit\"]"}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/element/577a5f4c-9715-40b3-b9c4-bad18d6d6be2/click - {}
+RESULT: {}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/element - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/b4cadec1aa3e27c13167c88f13ceddca/elements - {"using":"css selector","value":"div.logo"}
+COMMAND: DELETE /session/b4cadec1aa3e27c13167c88f13ceddca - {}
+RESULT: {"using":"css selector","value":"div.logo"}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: element ("div.logo") still not enabled after 10000ms
+    at D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\commands\browser\waitUntil.js:66:23
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.elementErrorHandlerCallbackFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\middlewares.js:24:32)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.elementErrorHandlerCallbackFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\middlewares.js:24:32)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.waitForEnabled (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\commands\element\waitForEnabled.js:51:9)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.elementErrorHandlerCallbackFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\middlewares.js:24:32)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.107_0_5304_88.windows.My_Login_application" name="Error Message Contain Text" time="7.554">
+      <failure/>
+      <error message="expect(received).toEqual(expected) // deep equality&#xA;&#xA;Expected: &quot;Your email or password is incorrect.&quot;&#xA;Received: &quot;Your reCAPTCHA was invalid. Please try again.&quot;"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/url - {"url":"https://sso.teachable.com/secure/9521/identity/login/password"}
+RESULT: {"url":"https://sso.teachable.com/secure/9521/identity/login/password"}
+COMMAND: GET /session/ad834d1a887f5072469cc97064e43ef8/title - {}
+RESULT: {}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element - {"using":"css selector","value":"input[type=\"email\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"email\"]"}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element/a5d88b1f-86c7-49a8-a5d4-1508042fb7cf/click - {}
+RESULT: {}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element - {"using":"css selector","value":"input[type=\"email\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"email\"]"}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element/a5d88b1f-86c7-49a8-a5d4-1508042fb7cf/value - {"text":"a_niko416@mail.ru"}
+RESULT: {"text":"a_niko416@mail.ru"}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element - {"using":"css selector","value":"input[type=\"password\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"password\"]"}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element/f648fe93-181d-49cb-b587-a9c60f66f6d4/click - {}
+RESULT: {}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element - {"using":"css selector","value":"input[type=\"password\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"password\"]"}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element/f648fe93-181d-49cb-b587-a9c60f66f6d4/value - {"text":"Pavlusha_18"}
+RESULT: {"text":"Pavlusha_18"}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element - {"using":"css selector","value":"input[type=\"submit\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"submit\"]"}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element/e0b47a96-7f99-4e7e-bc3f-9e9e29878366/click - {}
+RESULT: {}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element - {"using":"css selector","value":".text-with-icon"}
+RESULT: {"using":"css selector","value":".text-with-icon"}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/elements - {"using":"css selector","value":".text-with-icon"}
+RESULT: {"using":"css selector","value":".text-with-icon"}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/elements - {"using":"css selector","value":".text-with-icon"}
+RESULT: {"using":"css selector","value":".text-with-icon"}
+COMMAND: POST /session/ad834d1a887f5072469cc97064e43ef8/element - {"using":"css selector","value":".text-with-icon"}
+RESULT: {"using":"css selector","value":".text-with-icon"}
+COMMAND: GET /session/ad834d1a887f5072469cc97064e43ef8/element/40d52c4c-19e8-41b1-8e85-ac933eb9b8b5/text - {}
+RESULT: {}
+COMMAND: DELETE /session/ad834d1a887f5072469cc97064e43ef8 - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+Expected: [32m"Your [7memail or password is incorrect[27m."[39m
+Received: [31m"Your [7mreCAPTCHA was invalid. Please try again[27m."[39m
+    at Context.<anonymous> (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\test\specs\example.e2e.js:39:32)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.107_0_5304_88.windows.My_Login_application" name="Multiple Elements on the page" time="18.745">
+      <failure/>
+      <error message="element (&quot;div.logo&quot;) still not enabled after 10000ms"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/url - {"url":"https://sso.teachable.com/secure/9521/identity/login/password"}
+RESULT: {"url":"https://sso.teachable.com/secure/9521/identity/login/password"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":"input[type=\"submit\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"submit\"]"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":"input[type=\"email\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"email\"]"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":"input[type=\"password\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"password\"]"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":"ul.navigation li:nth-child(1) .fedora-navbar-link"}
+RESULT: {"using":"css selector","value":"ul.navigation li:nth-child(1) .fedora-navbar-link"}
+COMMAND: GET /session/b93f9c02a931f58d07da7de3f9bdc6a2/title - {}
+RESULT: {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/94123348-d57b-4406-8c21-36b21884543d/click - {}
+RESULT: {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/94123348-d57b-4406-8c21-36b21884543d/value - {"text":"a_niko416@mail.ru"}
+RESULT: {"text":"a_niko416@mail.ru"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/e4c4febf-7876-496b-81bc-f76aa14a2321/click - {}
+RESULT: {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/e4c4febf-7876-496b-81bc-f76aa14a2321/value - {"text":"Pavlusha_18"}
+RESULT: {"text":"Pavlusha_18"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/235c3754-1663-43e4-a6c2-aface189c6a1/click - {}
+RESULT: {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":".text-with-icon"}
+RESULT: {"using":"css selector","value":".text-with-icon"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/elements - {"using":"css selector","value":".text-with-icon"}
+RESULT: {"using":"css selector","value":".text-with-icon"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/elements - {"using":"css selector","value":".text-with-icon"}
+RESULT: {"using":"css selector","value":".text-with-icon"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":".text-with-icon"}
+RESULT: {"using":"css selector","value":".text-with-icon"}
+COMMAND: GET /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/26602029-f44f-4a28-b503-d72583307286/text - {}
+RESULT: {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/94123348-d57b-4406-8c21-36b21884543d/click - {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":"input[type=\"email\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"email\"]"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/94123348-d57b-4406-8c21-36b21884543d/click - {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":"input[type=\"email\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"email\"]"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/a7261caa-fe4d-4900-b87e-d3f1c49f1385/click - {}
+RESULT: {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/a7261caa-fe4d-4900-b87e-d3f1c49f1385/clear - {}
+RESULT: {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/a7261caa-fe4d-4900-b87e-d3f1c49f1385/value - {"text":"a_niko415@mail.ru"}
+RESULT: {"text":"a_niko415@mail.ru"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/e4c4febf-7876-496b-81bc-f76aa14a2321/click - {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":"input[type=\"password\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"password\"]"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/e4c4febf-7876-496b-81bc-f76aa14a2321/click - {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":"input[type=\"password\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"password\"]"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/c648b32a-470f-41b1-852a-aa4c5b727738/click - {}
+RESULT: {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/c648b32a-470f-41b1-852a-aa4c5b727738/value - {"text":"Pavlusha_19"}
+RESULT: {"text":"Pavlusha_19"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/235c3754-1663-43e4-a6c2-aface189c6a1/click - {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":"input[type=\"submit\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"submit\"]"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/235c3754-1663-43e4-a6c2-aface189c6a1/click - {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":"input[type=\"submit\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"submit\"]"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element/c02102a0-6b4f-437f-8609-6e527baa2b92/click - {}
+RESULT: {}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/element - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/b93f9c02a931f58d07da7de3f9bdc6a2/elements - {"using":"css selector","value":"div.logo"}
+COMMAND: DELETE /session/b93f9c02a931f58d07da7de3f9bdc6a2 - {}
+RESULT: {"using":"css selector","value":"div.logo"}
+RESULT: {}
+COMMAND: DELETE /session/b90cf610a9f8fd0d1e21ca74c1367dd9 - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: element ("div.logo") still not enabled after 10000ms
+    at D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\commands\browser\waitUntil.js:66:23
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.elementErrorHandlerCallbackFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\middlewares.js:24:32)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.elementErrorHandlerCallbackFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\middlewares.js:24:32)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.waitForEnabled (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\commands\element\waitForEnabled.js:51:9)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.elementErrorHandlerCallbackFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\middlewares.js:24:32)
+]]></system-err>
+    </testcase>
+  </testsuite>
+</testsuites>POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/element - {"using":"css selector","value":"input[type=\"submit\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"submit\"]"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/element/61b6cc01-0e36-46cb-b63b-6e3e20ae6405/click - {}
+RESULT: {}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/element - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+RESULT: {"using":"css selector","value":"div.logo"}
+COMMAND: POST /session/8dd21457-2e96-4514-bc6b-0c303713b135/elements - {"using":"css selector","value":"div.logo"}
+COMMAND: DELETE /session/8dd21457-2e96-4514-bc6b-0c303713b135 - {}
+RESULT: {"using":"css selector","value":"div.logo"}
+RESULT: {}
+COMMAND: DELETE /session/b07bc69699871d2b65978fa1b2c5814d - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: element ("div.logo") still not enabled after 10000ms
+    at D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\commands\browser\waitUntil.js:66:23
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.elementErrorHandlerCallbackFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\middlewares.js:24:32)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.elementErrorHandlerCallbackFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\middlewares.js:24:32)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.waitForEnabled (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\commands\element\waitForEnabled.js:51:9)
+    at async Element.wrapCommandFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\@wdio\utils\build\shim.js:137:29)
+    at async Element.elementErrorHandlerCallbackFn (D:\Automation Program Global - Advanced\Homework 7 - CI-CD\wdio-selenium-grid\node_modules\webdriverio\build\middlewares.js:24:32)
+]]></system-err>
+    </testcase>
+  </testsuite>
+</testsuites>
