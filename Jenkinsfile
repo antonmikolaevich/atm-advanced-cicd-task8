@@ -24,7 +24,7 @@ pipeline {//for jenkins -docker integration build image for the beginning
     //         }
     //     }
     // } 
-    // }
+    }
     post {
         always {
             bat 'docker compose down'
