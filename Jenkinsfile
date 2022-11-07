@@ -11,7 +11,7 @@ pipeline {//for jenkins -docker integration build image for the beginning
     stage ("Run tests in Chrome"){
         steps {
             script {
-            bat 'npm install webdriverio'
+            bat 'npm i @wdio/cli && npm install'
             bat 'docker compose run chrome'
             junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
         }
