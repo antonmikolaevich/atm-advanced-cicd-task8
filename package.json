@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx wdio run wdio.conf.js"
   },
-  "author": "Anton_Rak@epam.com",
+  "author": "Anton_Rak",
   "license": "ISC",
   "dependencies": {
     "@wdio/cli": "^7.25.4",

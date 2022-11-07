@@ -3,8 +3,10 @@ services:
   chrome:
     image: selenium/node-chrome:4.6.0-20221104
     shm_size: 2gb
+    build: .
+    command: npm test
     volumes:
-      - /reporterDocker:/reporterDocker  
+      - /reporterDocker:/api-project/reporterDocker  
     depends_on:
       - selenium-hub
     environment:
@@ -15,8 +17,10 @@ services:
   firefox:
     image: selenium/node-firefox:4.6.0-20221104
     shm_size: 2gb
+    build: .
+    command: npm test
     volumes:
-      - /reporterDocker:/reporterDocker 
+      - /reporterDocker:/api-project/reporterDocker 
     depends_on:
       - selenium-hub
     environment:
@@ -27,7 +31,10 @@ services:
   selenium-hub:
     image: selenium/hub:4.6.0-20221104
     build: .
+    command: npm test
     container_name: selenium-hub
+    volumes:
+      - /reporterDocker:/api-project/reporterDocker 
     ports:
       - "4442:4442"
       - "4443:4443"
