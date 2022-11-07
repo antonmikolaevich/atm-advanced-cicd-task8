@@ -4,7 +4,7 @@ pipeline {//for jenkins -docker integration build image for the beginning
     stage("Start Docker Compose"){
         steps {
             script {
-                bat 'docker-compose -f docker-compose.yml up -d'
+                bat 'docker-compose -f docker-compose.yml up'
             }
         }
     }
@@ -20,7 +20,7 @@ pipeline {//for jenkins -docker integration build image for the beginning
     post {
         always {
             junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
-            bat 'docker compose down'
+            bat 'docker-compose -f docker-compose.yml down'
         }
     }
 }
