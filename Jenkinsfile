@@ -8,13 +8,13 @@ pipeline {//for jenkins -docker integration build image for the beginning
             }
         }
     }
-    stage("Build App"){
-        steps {
-            script {
-                bat 'docker-compose run chrome'
-            }
-        }
-    }
+    // stage("Build App"){
+    //     steps {
+    //         script {
+    //             bat 'docker-compose run chrome'
+    //         }
+    //     }
+    // }
     
     }
     post {
