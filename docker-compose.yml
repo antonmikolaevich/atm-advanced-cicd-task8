@@ -2,7 +2,6 @@ version: "3"
 services:
   chrome:
     image: selenium/node-chrome:4.6.0-20221104
-    build: .
     shm_size: 2gb
     volumes:
       - ./reporterDocker:/api-project/reporterDocker  
@@ -15,7 +14,6 @@ services:
 
   firefox:
     image: selenium/node-firefox:4.6.0-20221104
-    build: .
     shm_size: 2gb
     volumes:
       - /dev/shm:/dev/shm

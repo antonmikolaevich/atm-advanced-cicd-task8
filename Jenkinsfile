@@ -4,7 +4,7 @@ pipeline {//for jenkins -docker integration build image for the beginning
     stage("Create network grid plus build the image"){
         steps {
             script {
-                bat 'docker-compose up -d'
+                bat 'docker-compose -f docker-compose.yml -d'
             }
         }
     }
