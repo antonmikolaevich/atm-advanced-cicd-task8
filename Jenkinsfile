@@ -11,7 +11,7 @@ pipeline {//for jenkins -docker integration build image for the beginning
     stage ("Run tests in Chrome"){
         steps {
             script {
-            bat 'docker compose run selenium-hub -v %cd%\\reporterDocker:/api-project/reporterDocker selenium/node-chrome:3.141.59-20210929'
+            bat 'docker compose run selenium-hub selenium/node-chrome:4.6.0-20221104'
             junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
         }
         }
