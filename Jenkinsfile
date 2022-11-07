@@ -4,18 +4,18 @@ pipeline {//for jenkins -docker integration build image for the beginning
     stage("Create network grid plus build the image"){
         steps {
             script {
-                bat 'docker-compose -f docker-compose.yml -d'
+                bat 'docker-compose -f docker-compose.yml up -d'
             }
         }
     }
-    stage ("Run tests in Chrome"){
-        steps {
-            script {
-            bat 'docker compose run selenium-hub selenium/node-chrome:4.6.0-20221104'
-            junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
-        }
-        }
-    }
+    // stage ("Run tests in Chrome"){
+    //     steps {
+    //         script {
+    //         bat 'docker compose run selenium-hub selenium/node-chrome:4.6.0-20221104'
+    //         junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
+    //     }
+    //     }
+    // }
     // stage('Run tests in Firefox'){
     //     steps {
     //         script {
@@ -27,6 +27,7 @@ pipeline {//for jenkins -docker integration build image for the beginning
     }
     post {
         always {
+            junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
             bat 'docker compose down'
         }
     }
