@@ -8,22 +8,22 @@ pipeline {//for jenkins -docker integration build image for the beginning
             }
         }
     }
-    // stage ("Run tests in Chrome"){
-    //     steps {
-    //         script {
-    //         bat 'docker compose run selenium-hub selenium/node-chrome:4.6.0-20221104'
-    //         junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
-    //     }
-    //     }
-    // }
-    // stage('Run tests in Firefox'){
-    //     steps {
-    //         script {
-    //             bat 'docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 -v %cd%\\reporterDocker:/api-project/reporterDocker selenium/node-firefox:3.141.59-20210929'
-    //             junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
-    //         }
-    //     }
-    // } 
+    stage ("Run tests in Chrome"){
+        steps {
+            script {
+            bat 'docker compose run chrome'
+            junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
+        }
+        }
+    }
+    stage('Run tests in Firefox'){
+        steps {
+            script {
+                bat 'docker compose run firefox'
+                junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
+            }
+        }
+    } 
     }
     post {
         always {
