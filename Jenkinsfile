@@ -8,23 +8,23 @@ pipeline {//for jenkins -docker integration build image for the beginning
             }
         }
     }
-    stage ("Run tests in Chrome"){
+    stage ("Run tests in Selenium Hub"){
         steps {
             script {
-            bat 'npm run test'
+            bat 'docker compose run selenium-hub'
             //bat 'docker compose run chrome'
             junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
         }
         }
     }
-    stage('Run tests in Firefox'){
-        steps {
-            script {
-                bat 'docker compose run firefox'
-                junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
-            }
-        }
-    } 
+    // stage('Run tests in Firefox'){
+    //     steps {
+    //         script {
+    //             bat 'docker compose run firefox'
+    //             junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
+    //         }
+    //     }
+    // } 
     }
     post {
         always {
