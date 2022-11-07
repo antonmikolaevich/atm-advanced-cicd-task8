@@ -1,10 +1,17 @@
 pipeline {//for jenkins -docker integration build image for the beginning
     agent any
     stages {
-    stage("Create network grid plus build the image"){
+    stage("Start Docker Compose"){
         steps {
             script {
-                bat 'docker-compose -f docker-compose.yml up --build -d'
+                bat 'docker-compose -f docker-compose.yml up -d'
+            }
+        }
+    }
+    stage("Build App"){
+        steps {
+            script {
+                bat 'docker-compose build selenium/hub'
             }
         }
     }
