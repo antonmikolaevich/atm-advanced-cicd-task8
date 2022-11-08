@@ -12,7 +12,6 @@ pipeline {//for jenkins -docker integration build image for the beginning
         steps {
             script {
                 bat 'npm run test'
-                junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
             }
         }
     }
@@ -20,6 +19,7 @@ pipeline {//for jenkins -docker integration build image for the beginning
     }
     post {
         always {
+            junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
             bat 'docker-compose --file docker-compose.yml down'
         }
     }
