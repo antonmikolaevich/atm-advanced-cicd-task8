@@ -5,4 +5,4 @@ COPY package.json /api-project
 COPY package-lock.json /api-project
 RUN npm set-script prepare '' && npm install && npm install -g mocha
 COPY . /api-project
-CMD ["npm", "run", "test"]
+CMD [ "npm", "run", "test" ]

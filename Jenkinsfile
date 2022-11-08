@@ -4,23 +4,23 @@ pipeline {//for jenkins -docker integration build image for the beginning
     stage("Start Docker Compose"){
         steps {
             script {
-                bat 'docker-compose -f docker-compose.yml up'
+                bat 'docker-compose --file docker-compose.yml up -d'
             }
         }
     }
-    // stage("Build App"){
-    //     steps {
-    //         script {
-    //             bat 'docker-compose run chrome'
-    //         }
-    //     }
-    // }
+    stage("Running Tests"){
+        steps {
+            script {
+                bat 'npm run test'
+                junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
+            }
+        }
+    }
     
     }
     post {
         always {
-            junit (allowEmptyResults: true, testResults: 'reporterDocker/test-results.xml')
-            bat 'docker-compose -f docker-compose.yml down'
+            bat 'docker-compose --file docker-compose.yml down'
         }
     }
 }
