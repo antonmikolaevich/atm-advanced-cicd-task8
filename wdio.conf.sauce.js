@@ -1,4 +1,3 @@
-const RpService = require('wdio-reportportal-service');
 
 exports.config = {
     //
@@ -17,9 +16,12 @@ exports.config = {
     // according to your user and key information. However, if you are using a private Selenium
     // backend you should define the host address, port, and path here.
     //
-    hostname: 'localhost',
-    port: 4444,
-    path: '/',
+    //hostname: 'localhost',
+    //port: 4444,
+    //path: '/',
+
+    user: "Anton_Rak",
+    key: "f294a58f-b89f-41d5-a6d6-b30ec441d5a3",
       // ...
   
     //
@@ -71,10 +73,13 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+       // maxInstances: 5,
         //
         browserName: "chrome",
-        acceptInsecureCerts: true,
+        platform: "Windows 10",
+        version: "latest",
+        screenResolution: "1280x1024"
+        //acceptInsecureCerts: true,
         // "goog:chromeOptions": {
         //   args: ["headless", "--disable-gpu", "--disable-dev-shm-usage", "--window-size=1920,1080"],
         //   prefs: {
@@ -91,10 +96,13 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+       // maxInstances: 5,
         //
         browserName: "firefox",
-        acceptInsecureCerts: true,
+        platform: "Windows 10",
+        version: "latest",
+        screenResolution: "1280x1024"
+       // acceptInsecureCerts: true,
         // "goog.chromeOptions": {
         //   args: ["headless", "--disable-gpu", "--disable-dev-shm-usage", "--window-size=1920,1080"],
         //   prefs: {
@@ -138,10 +146,10 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost:4444',
+    baseUrl: 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 20000,
+    waitforTimeout: 25000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
@@ -154,7 +162,9 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['docker'],
+    services: [['sauce', {
+      sauceConnect: true
+    }]],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

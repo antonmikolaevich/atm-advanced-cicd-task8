@@ -12,6 +12,7 @@ describe('My Login application', () => {
     it('Page Wdio test', async function () {    
         const pageTitle = await browser.getTitle();
         await expect(pageTitle).toEqual('Rahul Shetty Academy');
+        await $('input[value="Log in"]').waitForEnabled()
         //css, selector Lection 3, lesson 1
         await $('input[type="email"]').click();
         await $('input[type="email"]').addValue('a_niko415@mail.ru');
