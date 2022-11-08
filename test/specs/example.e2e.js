@@ -19,7 +19,7 @@ describe('My Login application', () => {
         await $('input[type="password"]').addValue('Pavlusha_19');
     
         await $('input[type="submit"]').click();
-        await $('div.logo').waitForEnabled()
+        await $('ul.navigation').waitForEnabled()
         const secondPageTitle = await browser.getUrl();
         await expect(secondPageTitle).toEqual('https://courses.rahulshettyacademy.com/');
     });
@@ -47,14 +47,6 @@ it('Multiple Elements on the page', async () => {
     const homeNavBarName = await $('ul.navigation li:nth-child(1) .fedora-navbar-link');
     const pageTitle = await browser.getTitle();
     await expect(pageTitle).toEqual('Rahul Shetty Academy');
-
-    await emailField.click();
-    await emailField.addValue('a_niko416@mail.ru');
-    await passwordField.click();
-    await passwordField.addValue('Pavlusha_18');
-    await signIn.click();
-    const errorMessage = await $('.text-with-icon').getText();
-    await expect(errorMessage).toEqual('Your email or password is incorrect.');
 //clear the incorrect credenials and enter the valid one
     await emailField.click();
     await emailField.clearValue();
@@ -63,7 +55,7 @@ it('Multiple Elements on the page', async () => {
     await passwordField.addValue('Pavlusha_19');
 
     await signIn.click();
-    await $('div.logo').waitForEnabled()
+    await $('ul.navigation').waitForEnabled()
     const secondPageTitle = await browser.getUrl();
     await expect(secondPageTitle).toEqual('https://courses.rahulshettyacademy.com/');
     //multiple elements on the page
