@@ -1,5 +1,3 @@
-const RpService = require('wdio-reportportal-service');
-
 exports.config = {
     //
     // ====================
