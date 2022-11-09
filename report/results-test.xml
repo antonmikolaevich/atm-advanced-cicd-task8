@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="My Login application" timestamp="2022-11-09T00:21:23" time="15.987" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="My Login application"/>
+      <property name="capabilities" value="firefox.106_0_5.windows"/>
+      <property name="file" value=".\test\specs\example.e2e.js"/>
+    </properties>
+    <testcase classname="firefox.106_0_5.windows.My_Login_application" name="Page Wdio test" time="10.1">
+      <system-out><![CDATA[
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/url - {"url":"https://sso.teachable.com/secure/9521/identity/login/password"}
+RESULT: {"url":"https://sso.teachable.com/secure/9521/identity/login/password"}
+COMMAND: GET /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/title - {}
+RESULT: {}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element - {"using":"css selector","value":"input[value=\"Log in\"]"}
+RESULT: {"using":"css selector","value":"input[value=\"Log in\"]"}
+COMMAND: GET /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element/37d64c37-db75-49fa-91b4-0c5fa04b8f41/enabled - {}
+RESULT: {}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element - {"using":"css selector","value":"input[type=\"email\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"email\"]"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element/7362475d-e85c-44fb-964a-80adf226a73a/click - {}
+RESULT: {}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element - {"using":"css selector","value":"input[type=\"email\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"email\"]"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element/7362475d-e85c-44fb-964a-80adf226a73a/value - {"text":"a_niko415@mail.ru"}
+RESULT: {"text":"a_niko415@mail.ru"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element - {"using":"css selector","value":"input[type=\"password\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"password\"]"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element/18375e71-c28a-4b7f-88ed-9ec0f4d44f67/click - {}
+RESULT: {}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element - {"using":"css selector","value":"input[type=\"password\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"password\"]"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element/18375e71-c28a-4b7f-88ed-9ec0f4d44f67/value - {"text":"Pavlusha_19"}
+RESULT: {"text":"Pavlusha_19"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element - {"using":"css selector","value":"input[type=\"submit\"]"}
+RESULT: {"using":"css selector","value":"input[type=\"submit\"]"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element/37d64c37-db75-49fa-91b4-0c5fa04b8f41/click - {}
+RESULT: {}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/elements - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: POST /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element - {"using":"css selector","value":"ul.navigation"}
+RESULT: {"using":"css selector","value":"ul.navigation"}
+COMMAND: GET /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/element/bf25c5f2-f3b8-4ec1-bc52-9c1aa36f7c27/enabled - {}
+RESULT: {}
+COMMAND: GET /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c/url - {}
+RESULT: {}
+COMMAND: DELETE /session/056c30b9-e6a1-4dc4-8c86-7996bc94f87c - {}
+RESULT: {}
+COMMAND: DELETE /session/675c2354-7db0-4122-9bc3-96068cc84e5c - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,19 @@
+{
+  "reportPortalClientConfig": {
+    "token": "6dbbd2b0-2395-48ff-adab-63209b916b35",
+    "endpoint": "https://reportportal.epam.com/api/v1",
+    "launch": "anton_rak_TEST_EXAMPLE",
+    "project": "anton_rak_personal",
+    "debug": false,
+    "description": "Task for last homework",
+    "tags": [
+      "Last",
+      "Home",
+      "Work"
+    ]
+  },
+  "screenshotsLogLevel": "error",
+  "reportSeleniumCommands": false,
+  "seleniumCommandsLogLevel": "debug",
+  "parseTagsFromTestTitle": true
+}
