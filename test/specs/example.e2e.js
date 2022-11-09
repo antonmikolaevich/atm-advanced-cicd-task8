@@ -9,7 +9,7 @@ describe('My Login application', () => {
         await browser.reloadSession();
     })
 
-    it.only('Page Wdio test', async function () {    
+    it('Page Wdio test', async function () {    
         const pageTitle = await browser.getTitle();
         await expect(pageTitle).toEqual('Rahul Shetty Academy');
         await $('input[value="Log in"]').waitForEnabled()
